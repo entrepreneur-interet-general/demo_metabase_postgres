@@ -2,27 +2,21 @@
 
 Analyse et exposition du RPPS avec une base PostgreSQL
 
+Metabase est accessible à l'adresse [http://10.200.15.25:3000](http://10.200.15.25:3000).
 
-## Installation du projet
+## Installation
 
+Installer Docker et Docker-Compose
 
-Création du fichier d'environnement `.env` avec les secrets pour se connecter aux bases.
+Sur le serveur, créer le fichier d'environnement `.env` avec la commande `cp env-template .env`.
+L'éditer avec des mots de passes pour se connecter aux bases.  
 
-    cp .env-template .env
+Démarrage des services `docker-compose up -d`
 
+Télécharger les données `download_data.sh`
 
+Peupler ou supprimer la table postgres.
 
-## Prérequis installations serveur
-
-- Docker 
-
-
-    wget -qO- https://get.docker.com/ | sh
-
-
-- Docker-Compose
-  
+    docker-compose exec postgres bash /home/data/load_table.sh
     
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    
-    sudo chmod +x /usr/local/bin/docker-compose
+    docker-compose exec postgres bash /home/data/drop_table.sh

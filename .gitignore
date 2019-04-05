@@ -1,14 +1,8 @@
 .env
 
-data/*
-!data/.gitkeep
+data/*.csv
 
 docker/**/data
 
 .idea/
-venv/
-.pytest_cache
-__pycache__
 .DS_Store
-.ipynb_checkpoints/
-*.ipynb

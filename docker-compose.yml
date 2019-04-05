@@ -4,6 +4,7 @@ services:
     image: postgres:10.1-alpine
     volumes:
       - ./docker/postgres/data:/var/lib/postgresql/data:rw
+      - ./data:/home/data
     environment:
       - POSTGRES_PASSWORD
       - PGDATA=/var/lib/postgresql/data/pgdata
