@@ -1,8 +1,9 @@
-# Demonstration Metabase + Postgres 
+# Exploration du RPPS avec Metabase et PostgreSQL 
 
-Démonstration de l'outil de BI Metabase, avec PostgreSQL comme backend, en utilisant Docker-Compose.
- 
-Nous utilisons le répertoire des professsionnels de santé (RPPS+ADELI) comme données d'exemple.  
+Démonstration de l'outil de BI Metabase pour explorer le répertoire des professsionnels de santé (RPPS+ADELI). 
+
+On utilise une base PostgreSQL comme source de données, une autre base PostgreSQL comme backend de Metabase. 
+Ces différents services sont orchestrés avec Docker-Compose.
 
 ## Installation
 
@@ -24,11 +25,11 @@ Ajouter des mots de passes dans ce fichier pour protéger la connexion aux bases
         - Port : `5432`
         - Nom de la base de données : `postgres`
         - Nom de l'utilisateur : `postgres`
-        - Mot de passe : `<VIDE>` (ou celui indiqué dans `.env)
+        - Mot de passe : `<VIDE>` (ou celui indiqué dans `.env`)
     - aller dans le tableau d'administration
         - Si la base n'a pas été ajouté (bug ?), recommencer
         - Dans `General`, modifier le paramètre `Adaptation des noms de table et de champ` par `Remplacer seulement les soulignés et tirés par un espace`
-    - Metabase est prêt pour l'exploration, en tant qu'utilisateur ou administrateur 
+    - Metabase est prêt pour l'exploration, en tant qu'utilisateur et administrateur 
 
 ## Autres manipulations
  
