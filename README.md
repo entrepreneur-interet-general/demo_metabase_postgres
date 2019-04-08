@@ -21,15 +21,15 @@ Ajouter des mots de passes dans ce fichier pour protéger la connexion aux bases
     - créer un compte administrateur
     - connecter la base PostgreSQL contenant les données (paramètre `postgres` partout)
         - Nom : `postgres` (ou peu importe)
-        - Hôte : `postgres` (nom de l'hôte via Docker)
+        - Hôte : `postgres` (hôte de la base sur le réseau créé par Docker-Compose)
         - Port : `5432`
         - Nom de la base de données : `postgres`
         - Nom de l'utilisateur : `postgres`
         - Mot de passe : `<VIDE>` (ou celui indiqué dans `.env`)
     - aller dans le tableau d'administration
-        - Si la base n'a pas été ajouté (bug ?), recommencer
+        - Si la base n'a pas été ajoutée (bug ?), recommencer
         - Dans `General`, modifier le paramètre `Adaptation des noms de table et de champ` par `Remplacer seulement les soulignés et tirés par un espace`
-    - Metabase est prêt pour l'exploration, en tant qu'utilisateur et administrateur 
+    - C'est prêt pour explorer, en tant qu'utilisateur ou administrateur
 
 ## Autres manipulations
  
