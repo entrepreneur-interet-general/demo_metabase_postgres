@@ -1,6 +1,5 @@
-# Mot de passe de la base Postgres contenant les données. Peu important car les données sont publiques
+# Mot de passe de la base contenant les données
 # POSTGRES_PASSWORD=
 
-# Mot de passe de la base Postgres contenant les données des utilisateurs de Metabase.
-# Important de la garder secrète car cette base peut contenir des informations confidentielles
+# Mot de passe de la base contenant les métadonnées Metabase, dont données utilisateurs
 # MB_POSTGRES_PASSWORD=
